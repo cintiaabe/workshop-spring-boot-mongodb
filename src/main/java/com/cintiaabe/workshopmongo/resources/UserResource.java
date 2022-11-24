@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.cintiaabe.workshopmongo.UserDTO;
 import com.cintiaabe.workshopmongo.domain.User;
+import com.cintiaabe.workshopmongo.dto.UserDTO;
 import com.cintiaabe.workshopmongo.services.UserService;
 
 @RestController
@@ -25,7 +25,7 @@ public class UserResource {
 	private UserService service;
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public ResponseEntity<List<UserDTO>> findAll (){
+	public ResponseEntity<List<UserDTO>> findAll(){
 		List <User> list = service.findAll();
 		List<UserDTO> listDTO = list.stream().map(x -> new UserDTO(x)).collect(Collectors.toList());
 		return ResponseEntity.ok().body(listDTO);

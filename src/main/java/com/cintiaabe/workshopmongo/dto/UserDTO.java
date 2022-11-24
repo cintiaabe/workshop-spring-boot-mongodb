@@ -1,4 +1,4 @@
-package com.cintiaabe.workshopmongo;
+package com.cintiaabe.workshopmongo.dto;
 
 import com.cintiaabe.workshopmongo.domain.User;
 
