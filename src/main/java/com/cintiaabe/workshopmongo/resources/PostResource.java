@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cintiaabe.workshopmongo.domain.Post;
-import com.cintiaabe.workshopmongo.dto.UserDTO;
 import com.cintiaabe.workshopmongo.services.PostService;
 
 @RestController
